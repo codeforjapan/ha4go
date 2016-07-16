@@ -42,6 +42,16 @@ group :development, :test do
   gem 'dotenv-rails'
 
   gem 'rails-erd'
+
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
+  gem 'shoulda-matchers', '~> 3.1'
+  gem 'capybara'
+  gem 'rspec-rails'
+  gem 'nokogiri'
+  gem 'guard-rspec'
+  gem 'email_spec'
+  gem 'jasmine-rails'
 end
 
 group :production do
@@ -53,6 +63,6 @@ gem 'rails_12factor', group: :production
 
 #gem 'compass', :git => 'git://github.com/chriseppstein/compass.git'
 gem 'compass'
-gem 'compass-rails', :git => 'git://github.com/Compass/compass-rails.git'
+gem 'compass-rails', git: 'git://github.com/Compass/compass-rails.git'
 
 gem 'google-analytics-rails'
