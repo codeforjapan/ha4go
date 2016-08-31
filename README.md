@@ -90,21 +90,6 @@ bundle exec rails s
 (現在準備中)
 
 
-## Docker Composeを用いる場合
-
-docker-compose を使うと、db と web 両方の環境を立ち上げてくれます。
-
-`.env` ファイルは `MYSQL_HOST=db` としておいてください。
-
-**注意このMySQLは公式Dockerのrootパスワードそのままなど安全ではないですので運用には充分気をつけて下さい**
-
-``` shell
-eval $(docker-machine env) # docker-machineを用いている場合
-docker-compose build
-docker-compose up
-export MYSQL_HOST=`docker-machine ip default` # docker-machineの場合、Linuxの場合は 127.0.0.1 など
-mysql -uroot -h$MYSQL_HOST -p < init.sql      # create db & user
-```
 
 db の初期設定は以下の手順で行ってください。
 
